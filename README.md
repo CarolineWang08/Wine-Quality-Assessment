@@ -8,12 +8,14 @@ The distributor now plans to train a machine learning based algorithm that would
 You are tasked to train an algorithm for assessment of the wines using the dataset available in Canvas/Files/HW3 You are advised to follow the following procedures:
 
 1.	Prepare data for analysis: import dataset, handle missing values if there are any, ensure all variables are numerical, run basic commands to describe your data including distribution of the outcome variable. 
+
 2.	Train a baseline model using Linear Regression:
 2.1	Specify the input (X) variables and target (y) variable. Use all available features for training. 
 2.2	Split the data into training (70%) and validation (30%) sets (use random_state = 0)
 2.3	Instantiate the regressor, train it, and make predictions on the validation set.
 2.4	Evaluate prediction performance using root mean squared error (RMSE). Provide a brief written statement with your overall conclusions associated with your baseline model’s accuracy.
 Note: The baseline accuracy that you should be able to achieve is RMSE = 0.779
+
 3.	The baseline RMSE of 0.71 that you should have achieved is not a bad start for any machine learning project. Now, your task is to improve your prediction accuracy. To do so, you should try:
 3.1	Standardize your predictors, re-run your model, and provide a brief statement if your RMSE improved considerably. Continue using standardized predictors for the rest of the analysis. 
 3.2	Check the variables for signs of multicollinearity. Re-run your model with two variables that are mostly collinear removed from analysis. Provide a brief statement if removing those two variables improves your prediction accuracy.
@@ -23,8 +25,8 @@ Note: The baseline accuracy that you should be able to achieve is RMSE = 0.779
 3.6	Re-run your KNN model with the “optimal” number of neighbors value. Provide a brief statement if you were able to improve your prediction accuracy.
 3.7	Now, import the library to run a Support Vector Regressor (SVR) model, https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html 
 3.8	Using example in the self-study notebook, run a Grid Search for SVR model trying the following values for the corresponding parameters:
-(i)	C (regularization parameter) values from 1 to 3,
-(ii)	kernel: rbf and poly,
-(iii)	gamma: scale and auto
+  (i)	C (regularization parameter) values from 1 to 3,
+  (ii)	kernel: rbf and poly,
+  (iii)	gamma: scale and auto
 3.9	Now, using the “best” parameters suggested by GridSearchCV, re-run your SVR model. Provide a brief statement if using SVR with parameterization suggested by GridSearchCV improves your prediction accuracy.
 3.10	 Finally, using 5-fold cross validation, run your “best” performing model using appropriate scoring and make a conclusion if your model trains equally well on different randomly drawn datasets or there is variance bias present. 
